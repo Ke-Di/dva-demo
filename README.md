@@ -8,7 +8,7 @@
 
 克隆项目文件:
 
-```ssh
+```bash
 git clone git@github.com:Ke-Di/dva-demo-count.git
 ```
 
@@ -16,13 +16,13 @@ git clone git@github.com:Ke-Di/dva-demo-count.git
 
 开始前请确保没有安装roadhog、webpack到NPM全局目录, 国内用户推荐yarn或者cnpm
 
-```ssh
+```bash
 yarn 或者 npm i
 ```
 
 开发：
 
-```ssh
+```bash
 yarn start 或者 npm run start
 打开 http://localhost:8000 #端口在package.json中cross-env后加上 PORT=8000指定
 ```
@@ -125,6 +125,8 @@ app.start('#root');
 - `Model` 对象的例子
 
 ```js
+import key from "keymaster";
+
 app.model({
   namespace: 'count',
   
@@ -180,7 +182,7 @@ const delay = timeout => {
 
 - `Model` 对象的优点
 
-1. 把 `store` 及 ``saga` 统一为一个 `model` 的概念, 写在一个 js 文件里面
+1. 把 `store` 及 `saga` 统一为一个 `model` 的概念, 写在一个 js 文件里面
 2. 增加了一个 `Subscriptions`, 用于收集其他来源的 `action`, eg: 键盘操作
 3. `model` 写法很简约, 类似于 DSL 或者 RoR, coding 快得飞起✈️
 

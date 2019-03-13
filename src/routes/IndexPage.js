@@ -17,10 +17,10 @@ const IndexPage = ({ count, dispatch }) => {
           +
         </button>
       </div>
-      {count.current === 4 ? null : (
+      {count.current === 9 ? null : (
         <h1 className={styles.title}>Yay! Welcome to dva!</h1>
       )}
-      {count.current === 2 ? null : <div className={styles.welcome} />}
+      {count.current === 7 ? null : <div className={styles.welcome} />}
       <ul className={styles.list}>
         <li>
           To get started, edit <code>src/index.js</code> and save to reload.
