@@ -1,6 +1,6 @@
 [toc]
 
-# Dva Demo Count
+# Dva Demo
 
 这个 Demo 来自 dva 脚手架的[参考文档](https://github.com/dvajs/dva-docs/blob/master/v1/zh-cn/getting-started.md)
 
@@ -9,7 +9,9 @@
 克隆项目文件:
 
 ```bash
-git clone git@github.com:Ke-Di/dva-demo-count.git
+git clone https://github.com/Ke-Di/dva-demo.git
+# 或
+git clone git@github.com:Ke-Di/dva-demo.git
 ```
 
 进入目录安装依赖:
@@ -25,6 +27,13 @@ yarn 或者 npm i
 ```bash
 yarn start 或者 npm run start
 打开 http://localhost:8000 #端口在package.json中cross-env后加上 PORT=8000指定
+```
+
+打包：
+
+```bash
+yarn build 或者 npm run build
+# 将打包产生的 /dist 文件夹的内容传入服务器并监听前端服务即可
 ```
 
 ## React 没有解决的问题
@@ -80,6 +89,7 @@ dva = React + React-Router + Redux + Redux-saga
 `View` 就是 React 组件构成的 UI 层，从 `State` 取数据后，渲染成 HTML 代码。只要 State 有变化，`View` 就会自动更新。
 - `Action`：一个对象，描述事件
 `Action` 是用来描述 UI 层事件的一个对象。
+
 ```js
 {
   type: 'click-submit-button',
@@ -90,6 +100,7 @@ dva = React + React-Router + Redux + Redux-saga
 `connect` 是一个函数，绑定 `State` 到 `View`。
 `connect` 方法返回的也是一个 `React` 组件，通常称为容器组件。因为它是原始 UI 组件的容器，即在外面包了一层 `State`。
 `connect` 方法传入的第一个参数是 `mapStateToProps` 函数，`mapStateToProps` 函数会返回一个对象，用于建立 `State` 到 `Props` 的映射关系。
+
 ```js
 import { connect } from 'dva';
 
@@ -98,9 +109,11 @@ const mapStateToProps = (state) => {
 }
 connect(mapStateToProps)(App);
 ```
+
 - `dispatch` 方法：一个函数，发送 `Action` 到 `State`
 `dispatch` 是一个函数方法，用来将 `Action` 发送给 `State`。
 `dispatch` 方法从哪里来？被 `connect` 的 `Component` 会自动在 `props` 中拥有 `dispatch` 方法。
+
 ```js
 dispatch({
   type: 'click-submit-button',

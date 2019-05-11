@@ -1,5 +1,7 @@
 {
+  "name": "dva-demo",
   "private": true,
+  "description": "React, Dva, Ant-Design",
   "scripts": {
     "start": "roadhog server",
     "build": "roadhog build",
@@ -7,10 +9,14 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "antd": "^3.17.0",
+    "babel-polyfill": "^6.26.0",
     "dva": "^2.4.1",
+    "keymaster": "^1.6.2",
+    "moment": "^2.24.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "keymaster": "^1.6.2"
+    "react-highlight-words": "^0.16.0"
   },
   "devDependencies": {
     "babel-plugin-dva-hmr": "^0.3.2",
