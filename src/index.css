@@ -1,5 +1,22 @@
-
-html, body, :global(#root) {
+html,
+body,
+:global(#root) {
   height: 100%;
 }
 
+/* 关于表格的全局样式 */
+:global(.ant-table-thead > tr > th) {
+  background-color: #e3e3e3;
+}
+
+:global(.ant-table-small > .ant-table-content > .ant-table-body) {
+  margin: 0;
+}
+
+:global(.evenRow) {
+  background-color: #f8f8f8;
+}
+
+:global(.oddRow) {
+  background-color: #ffffff;
+}

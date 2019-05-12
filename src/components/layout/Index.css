@@ -1,0 +1,50 @@
+.mainLayout {
+  min-width: 1280px;
+}
+
+.headerWhite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+}
+
+.headerLeft{
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  margin-right: 17px;
+}
+
+.menuIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 17px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.userIconWhite {
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+}
+
+.userName {
+  margin: 0 5px 0 10px;
+}
+
+.mainContainer{
+  padding: 20px;
+  background-color: #f7f7f7;
+}

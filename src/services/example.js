@@ -1,5 +1,5 @@
 import request from "../utils/request";
 
-export function query() {
-  return request("/api/users");
-}
+export const fetch = async param => {
+  return request(param.url, param.options);
+};

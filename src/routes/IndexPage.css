@@ -1,13 +1,8 @@
 
 .normal {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-
-  font-family: Georgia, sans-serif;
-  margin-top: 3em;
+  padding: 2em 0;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .record{
@@ -17,14 +12,12 @@
 
 .current{
   font-size: 40px;
-  /* color: yellow; */
 }
 
 .button{
   width: 100px;
   height: 50px;
   font-size: 30px;
-  color: red;
 }
 
 .title {

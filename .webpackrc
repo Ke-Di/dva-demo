@@ -1,2 +1,12 @@
 {
+  "theme": {
+    "@primary-color": "#ffc035",
+    "@link-color": "#ffc035",
+    "@border-radius-base": "10px",
+    "@font-size-base": "16px",
+    "@line-height-base": "1.2"
+  },
+ "extraBabelPlugins": [
+   ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]
+ ]
 }

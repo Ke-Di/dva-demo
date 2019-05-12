@@ -1,26 +1,27 @@
-import React from "react";
 import { connect } from "dva";
+import { Button } from "antd";
 import styles from "./IndexPage.css";
 
 const IndexPage = ({ count, dispatch }) => {
+  const { record, current } = count;
+
+  const AddCount = () => {
+    dispatch({ type: "count/add", payload: "some props" });
+  };
+
   return (
     <div className={styles.normal}>
-      <div className={styles.record}>Highest Record: {count.record}</div>
-      <div className={styles.current}>{count.current}</div>
+      <div className={styles.record}>Highest Record: {record}</div>
+      <div className={styles.current}>{current}</div>
       <div>
-        <button
-          className={styles.button}
-          onClick={() => {
-            dispatch({ type: "count/add", payload: "some props" });
-          }}
-        >
+        <Button className={styles.button} onClick={AddCount}>
           +
-        </button>
+        </Button>
       </div>
-      {count.current === 9 ? null : (
+      {current === 9 ? null : (
         <h1 className={styles.title}>Yay! Welcome to dva!</h1>
       )}
-      {count.current === 7 ? null : <div className={styles.welcome} />}
+      {current === 7 ? null : <div className={styles.welcome} />}
       <ul className={styles.list}>
         <li>
           To get started, edit <code>src/index.js</code> and save to reload.
@@ -37,8 +38,6 @@ const IndexPage = ({ count, dispatch }) => {
 
 IndexPage.propTypes = {};
 
-const mapStateToProps = state => {
-  return { count: state.count };
-};
+const mapStateToProps = ({ count }) => ({ count });
 
 export default connect(mapStateToProps)(IndexPage);
