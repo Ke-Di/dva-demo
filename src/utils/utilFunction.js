@@ -8,8 +8,7 @@ export const RedirectToLogin = () => {
 
 // 与服务端的数据请求，定义一些错误代码，该错误情况下需要退出登录
 export let errorCodeQuit = [4001];
-const ErrorCodeQuit = new Map()
-  .set(4001, "登录失效，请重新登录");
+const ErrorCodeQuit = new Map().set(4001, "登录失效，请重新登录");
 
 export const ErrorCodeTextQuit = errorCode => {
   return ErrorCodeQuit.get(errorCode) || "出现错误，请重试";
@@ -123,4 +122,13 @@ export const SplitText = (text, Split = "/") => {
   }
   let textArray = text.split(Split);
   return textArray.join("\n");
+};
+
+const CertStatus = new Map()
+  .set(0, "未认证")
+  .set(1, "中级认证")
+  .set(2, "高级认证");
+
+export const CertStatusText = state => {
+  return CertStatus.get(state) || "——";
 };

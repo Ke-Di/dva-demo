@@ -22,7 +22,7 @@ const Header = ({ location }) => {
       <div className={styles.headerWhite}>
         <div className={styles.headerLeft}>
           <div className={styles.logoImage}>
-            <Icon type="fullscreen-exit" />
+            <Icon type="snippets" />
           </div>
           <span className={styles.headerTitle}>Dva Demo</span>
         </div>

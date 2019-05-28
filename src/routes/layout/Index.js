@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "../../components/layout/Header";
 import styles from "./Index.css";
 
 const MainLayout = ({ children, history, location }) => {
@@ -9,5 +9,5 @@ const MainLayout = ({ children, history, location }) => {
     </div>
   );
 };
-
+ 
 export default MainLayout;

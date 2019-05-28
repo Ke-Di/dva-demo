@@ -17,9 +17,6 @@
 }
 
 .logoImage {
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
   margin-right: 17px;
 }
 
@@ -42,9 +39,4 @@
 
 .userName {
   margin: 0 5px 0 10px;
-}
-
-.mainContainer{
-  padding: 20px;
-  background-color: #f7f7f7;
 }
