@@ -1,7 +1,15 @@
 html,
 body,
 :global(#root) {
-  height: 100%;
+  font-family: "Microsoft YaHei";
+  /* font-family: "Microsoft YaHei", "Arial Narrow", Arial, sans-serif; */
+  font-size: 14px;
+  line-height: 1;
+  color: #333333;
+  letter-spacing: 1px;
+  box-sizing: content-box;
+  /* height: 100%; */
+  background-color: #ffffff;
 }
 
 /* 关于表格的全局样式 */
